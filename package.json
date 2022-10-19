@@ -1,0 +1,29 @@
+{
+  "name": "pratica-api-orm-express-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serverUp": "nodemon ./app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdrcunha/Pratica-API-orm-express-sequelize.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdrcunha/Pratica-API-orm-express-sequelize/issues"
+  },
+  "homepage": "https://github.com/pdrcunha/Pratica-API-orm-express-sequelize#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.25.3",
+    "sequelize-cli": "^6.5.1"
+  }
+}
