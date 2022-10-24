@@ -1,8 +1,8 @@
-const express=require("express");
-const conectBd = require("./database/conectionBd");
+const express=require('express');
+var app=express();
+const conectDb=require('../app/database/connection');
+const router = require('./routers');
+conectDb();
 
-const app= express();
-
-app.use(express.json());
 
 module.exports=app;
