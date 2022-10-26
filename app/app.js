@@ -1,8 +1,10 @@
-const express=require('express');
-var app=express();
-const conectDb=require('../app/database/connection');
-const router = require('./routers');
-conectDb();
+const expres=require('express');
+const dbConfig=require('../app/database/connectDb')
+const app=expres();
+const routes = require('./routers')
 
 
-module.exports=app;
+
+routes(app)
+
+module.exports= app;

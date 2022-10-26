@@ -10,35 +10,33 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nome: {
-        type: Sequelize.STRING(64),
-        allowNull: false,
+        type: Sequelize.STRING(128)
       },
-      lado: {
-        type: Sequelize.STRING(64),
-        allowNull: false,
+      tipo: {
+        type: Sequelize.STRING
+      },
+      preco: {
+        type: Sequelize.INTEGER
       },
       hp: {
-        type: Sequelize.INTEGER(11),
-        allowNull: false,
-      },
-      mp: {
-        type: Sequelize.INTEGER(11),
-        allowNull: false,
-      },
-      speed: {
-        allowNull: false,
-        type: Sequelize.INTEGER(11),
-        allowNull: false,
+        type: Sequelize.INTEGER
       },
       def: {
-        allowNull: false,
-        type: Sequelize.INTEGER(11),
-        allowNull: false,
+        type: Sequelize.INTEGER
       },
       atk: {
+        type: Sequelize.INTEGER
+      },
+      icon: {
+        type: Sequelize.BLOB
+      },
+      createdAt: {
         allowNull: false,
-        type: Sequelize.INTEGER(11),
+        type: Sequelize.DATE
+      },
+      updatedAt: {
         allowNull: false,
+        type: Sequelize.DATE
       }
     });
   },

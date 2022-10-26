@@ -30,15 +30,6 @@ module.exports = (sequelize, DataTypes) => {
       preco: {
         type: DataTypes.INTEGER
       },
-      hp: {
-        type: DataTypes.INTEGER
-      },
-      def: {
-        type: DataTypes.INTEGER
-      },
-      atk: {
-        type: DataTypes.INTEGER
-      },
       icon: {
         type: DataTypes.BLOB
       },
@@ -52,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
       }
   }, {
     sequelize,
-    modelName: 'Unidades',
+    modelName: 'Consumiveis',
   });
   return Unidades;
 };

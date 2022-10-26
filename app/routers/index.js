@@ -1,7 +1,11 @@
-const { Router } = require("express");
-const unidades = require('./unidadesRoute');
-const router = Router();
+const bodyParser = require('body-parser')
+ 
+const unidades = require('./unidadesRoute')
 
-router.use(unidades);
-
-module.exports = router;
+module.exports = app => {
+ app.use(
+   bodyParser.json(),
+   bodyParser.urlencoded({ extended: false }),
+   unidades
+   )
+ }
