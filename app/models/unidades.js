@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Unidades.belongsTo(models.ItensUnidades, {foreignKey: 'id_itensUnidades', as: 'ItensUnidades'})
     }
   }
   Unidades.init({
@@ -24,23 +24,44 @@ module.exports = (sequelize, DataTypes) => {
       nome: {
         type: DataTypes.STRING(128)
       },
-      tipo: {
-        type: DataTypes.STRING
+      fk_capacete: {
+        type: DataTypes.INTEGER(11)
       },
-      preco: {
-        type: DataTypes.INTEGER
+      fk_colete: {
+        type: DataTypes.INTEGER(11)
       },
-      hp: {
-        type: DataTypes.INTEGER
+      fk_armaPrimaria: {
+        type: DataTypes.INTEGER(11)
       },
-      def: {
-        type: DataTypes.INTEGER
+      fk_armaSecundaria: {
+        type: DataTypes.INTEGER(11)
       },
-      atk: {
-        type: DataTypes.INTEGER
+      fk_kitAuxilo: {
+        type: DataTypes.INTEGER(11)
       },
-      icon: {
-        type: DataTypes.BLOB
+      fk_slot1: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot2: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot3: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot4: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot5: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot6: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot7: {
+        type: DataTypes.INTEGER(11)
+      },
+      fk_slot8: {
+        type: DataTypes.INTEGER(11)
       },
       createdAt: {
         allowNull: false,

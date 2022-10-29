@@ -2,33 +2,15 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Unidades', {
-      id_unidade: {
+    await queryInterface.createTable('tipos', {
+      id_tipo: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
       nome: {
-        type: Sequelize.STRING(128)
-      },
-      tipo: {
         type: Sequelize.STRING
-      },
-      preco: {
-        type: Sequelize.INTEGER
-      },
-      hp: {
-        type: Sequelize.INTEGER
-      },
-      def: {
-        type: Sequelize.INTEGER
-      },
-      atk: {
-        type: Sequelize.INTEGER
-      },
-      icon: {
-        type: Sequelize.BLOB
       },
       createdAt: {
         allowNull: false,
@@ -41,6 +23,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Unidades');
+    await queryInterface.dropTable('tipos');
   }
 };
